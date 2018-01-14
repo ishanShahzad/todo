@@ -1,4 +1,4 @@
-require('./todo2');
+var addlist=require('./todo2');
 $(document).ready(function(){
 
   console.log('..loading')
@@ -10,7 +10,7 @@ $(document).ready(function(){
     var item_value = $('#list_item_input').val();
     var item_obj = {item_value: item_value, completed: false}
     $('#list_item_input').val('');
-    addListItem(item_obj);
+    addListItem(item_obj,listItems);
 
   })
 
