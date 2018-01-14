@@ -1,7 +1,9 @@
-var addlist=require('./todo2');
-$(document).ready(function(){
 
-  console.log('..loading')
+ import addListItem from './todo2';
+
+$(document).ready(function(){
+ 
+  console.log(`..loading`)
 
   var listItems =[];
 
@@ -14,6 +16,7 @@ $(document).ready(function(){
 
   })
 
+})
 
 /////////////////////////////////////////////
 

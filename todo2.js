@@ -1,40 +1,41 @@
-function addListItem(item) {
+ export default function addListItem(item,listItems) {
   listItems.push(item)
-  renderArray();
+  renderArray(listItems);
+
 }
 
-function removeListItem(index) {
+function removeListItem(index,listItems) {
   listItems.splice(index, 1)
-  renderArray();
+  renderArray(listItems);
 }
 
-function shiftUpItem(index) {
+function shiftUpItem(index,listItems) {
   if(!index) {
     return null;
   } else {
     var temp = listItems.splice(index, 1)
     listItems.splice(index-1, 0, temp[0])
-    renderArray();
+    renderArray(listItems);
   }
 }
 
-function shiftDownItem(index) {
+function shiftDownItem(index,listItems) {
   if(index >= listItems.length -1) {
     return null;
   } else {
     var temp = listItems.splice(index, 1)
     listItems.splice(index+1, 0, temp[0])
-    renderArray();
+    renderArray(listItems);
   }
 }
 
-function completeItem(index) {
+function completeItem(index,listItems) {
   listItems[index].completed = !listItems[index].completed;
   console.log(listItems[index].completed)
-  renderArray();
+  renderArray(listItems);
 }
 
-function renderArray() {
+function renderArray(listItems) {
   $('tbody').remove();
   $('table').append('<tbody></tbody>')
   listItems.map(function(listItem, index){
@@ -58,23 +59,21 @@ function renderArray() {
         $('tbody').append(item);
         $(`#btn_delete_${index}`).on('click', function(e){
           console.log('delete has been clicked')
-          removeListItem(index);
+          removeListItem(index,listItems);
         })
         $(`#btn_shift_up_${index}`).on('click', function(e){
-          shiftUpItem(index);
+          shiftUpItem(index,listItems);
         })
         $(`#btn_shift_down_${index}`).on('click', function(e){
-          shiftDownItem(index);
+          shiftDownItem(index,listItems);
         })
         $(`#btn_complete_${index}`).on('click', function(e){
-          completeItem(index);
+          completeItem(index,listItems);
         })
     })
 }
 
 
-
 //////////////////////////////////////////////////////////////////
 
 
-});
