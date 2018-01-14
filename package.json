@@ -1,0 +1,18 @@
+{
+  "name": "Project1",
+  "version": "1.0.0",
+  "description": "this is project 1",
+  "main": "file1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ishan",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.20.1"
+  },
+  "devDependencies": {
+    "nodemailer": "^4.4.1"
+  }
+}
