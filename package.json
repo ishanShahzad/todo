@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todolist",
+  "main": "todo-correct.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishanShahzad/todo.git"
+  },
+  "author": "ishan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ishanShahzad/todo/issues"
+  },
+  "homepage": "https://github.com/ishanShahzad/todo#readme"
+}
