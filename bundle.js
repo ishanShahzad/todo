@@ -75,7 +75,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 $(document).ready(function(){
  
-  console.log(`..loading`)
+  console.log(`..file is loading`)
 
   var listItems =[];
 
